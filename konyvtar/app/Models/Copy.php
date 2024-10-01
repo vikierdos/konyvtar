@@ -8,8 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Copy extends Model
 {
     use HasFactory;
+
+    protected $primaryKey = 'copy_id';
+
     protected $fillable = [
-        'user_id',
-        'book_id'
+        'book_id',
+        'hardcovered',
+        'publication',
+        'status'
     ];
 }

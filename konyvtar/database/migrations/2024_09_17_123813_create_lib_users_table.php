@@ -13,24 +13,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('lib_users', function (Blueprint $table) {
-            $table->id();
+            $table->id('user_id');
             $table->string('name');
             $table->string('email');
+            $table->tinyInteger('permission')->default(1);
             $table->timestamps();
         });
 
-        LibUser::create([
-            'name' => 'Viki',
-            'email' => 'szuper@gmail.com'
-        ]);
-        LibUser::create([
-            'name' => 'Sella',
-            'email' => 'extraszuper@gmail.com'
-        ]);
-        LibUser::create([
-            'name' => 'Én2',
-            'email' => 'szuper2@gmail.com'
-        ]);
     }
 
     /**

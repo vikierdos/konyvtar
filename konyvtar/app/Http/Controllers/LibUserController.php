@@ -28,17 +28,17 @@ class LibUserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $user_id)
     {
-        return LibUser::find($id);
+        return LibUser::find($user_id);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $user_id)
     {
-        $record = LibUser::find($id);
+        $record = LibUser::find($user_id);
         $record->fill($request->all());
         $record->save();
     }
@@ -46,8 +46,8 @@ class LibUserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $user_id)
     {
-        LibUser::find($id)->delete();
+        LibUser::find($user_id)->delete();
     }
 }

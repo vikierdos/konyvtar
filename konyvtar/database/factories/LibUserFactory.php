@@ -18,7 +18,7 @@ class LibUserFactory extends Factory
     {
         return [
             'name' => fake('hu_HU')->name(),
-            'email' => fake()->email()
+            'email' => fake()->email(),
         ];
     }
 }

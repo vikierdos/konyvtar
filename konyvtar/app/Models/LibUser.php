@@ -11,6 +11,7 @@ class LibUser extends Model
 
     protected $fillable = [
         'name',
-        'email'
+        'email',
+        'permission'
     ];
 }
